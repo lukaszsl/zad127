@@ -8,15 +8,6 @@ $(function(){
     }).disableSelection();
   }
 
-  function randomString() {
-    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
-    var str = '', i;
-    for (i = 0; i < 10; i++) {
-      str += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return str;
-  }
-
   // KANBAN
   var board = {
     name: 'Tablica Kanban',
@@ -118,4 +109,5 @@ $(function(){
   // DODAWANIE KART DO KOLUMN
   todoColumn.createCard(card1);
   doingColumn.createCard(card2);
+
 })
