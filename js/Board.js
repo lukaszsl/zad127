@@ -1,11 +1,11 @@
 var board = {
-	name: 'Tablica Kanban',
-	createColumn: function(column) {
-	  this.element.append(column.element);
-	  initSortable();
-	},
-	element: $('#board .column-container')
-};
+		name: 'Tablica Kanban',
+		createColumn: function(column) {
+			this.element.append(column.element);
+			initSortable();
+		},
+		element: $('#board .column-container')
+	};
 
 $('.create-column').click(function() {
 	var columnName = prompt('Enter a column name');
@@ -21,10 +21,10 @@ $('.create-column').click(function() {
 		}
 	});
 });
-	
+
 function initSortable() {
-    $('.card-list').sortable({
-      connectWith: '.card-list',
-      placeholder: 'card-placeholder'
-    }).disableSelection();
-  }
+	$('.card-list').sortable({
+		connectWith: '.card-list',
+		placeholder: 'card-placeholder'
+	}).disableSelection();
+}
